@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+	background: hsl(220, 12%, 8%);
+	color: hsl(0, 0%, 100%);
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	/* animation: rotateHue infinite 5s; */
+}
+
+#header {
+	display: flex;
+	height: 56px;
+	align-items: center;
+	background: hsl(220, 15%, 12%);
+	font-size: 24px;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#logo {
+	flex-grow: 1;
+	margin-left: 16px;
+}
+
+#login {
+	margin-right: 16px;
+}
+
+#login a {
+	background: hsl(210, 90%, 50%);
+	padding: 6px 12px;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 1px;
+}
+
+#header-user {
+	display: none;
+	padding: 8px;
+	margin-right: 8px;
+	cursor: pointer;
+	transition: 50ms;
+}
+
+#header-user:hover {
+	background: hsla(0, 0%, 100%, 0.1);
+}
+
+#header.show-user #header-user {
+	display: flex;
+}
+
+#header.show-user #login {
+	display: none;
+}
+
+#header-user #name {
+	margin-right: 12px;
+}
+
+#header-user #avatar {
+	width: 28px;
+	height: 28px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* @keyframes rotateHue {
+	from {
+		filter: hue-rotate(0deg) saturate(200%) brightness(120%);
+	}
+	to {
+		filter: hue-rotate(360deg) saturate(200%) brightness(120%);
+	}
+} */
